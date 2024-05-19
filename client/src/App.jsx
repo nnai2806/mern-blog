@@ -7,9 +7,10 @@ import SignUp from "./pages/SignUp";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
-
+import CreatePost from "./pages/CreatePost";
 import PrivateRoute from "./components/PrivateRoute";
 // import { Footer } from "flowbite-react";
+import OnlyAdminPrivateRoute from "./components/OnlyAdminPrivateRoute";
 
 export default function App() {
   return (
@@ -21,6 +22,10 @@ export default function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+
+        <Route element={<OnlyAdminPrivateRoute />}>
+          <Route path="/create-post" element={<CreatePost />} />
         </Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/projects" element={<Projects />} />
