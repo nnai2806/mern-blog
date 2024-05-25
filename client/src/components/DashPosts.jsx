@@ -1,7 +1,7 @@
 import React from "react";
 
 const DashPosts = () => {
-  return <div>DashPosts</div>;
+  return <div>DashPosts DashPosts</div>;
 };
 
 export default DashPosts;
